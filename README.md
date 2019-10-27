@@ -3,35 +3,65 @@
 In this sample, we will develop voting dapp using icondev blockchain and Morpheuslabs blockchain as service platform to leverage development tasks.
 
 dApp includes 2 parts, smart contract and a web page for user to interactive with it, It's all right in python. dApp will go through following steps:
-    1. Create workspace.
-    2. Create Icon blockchain Ops network.
-    3. Test network and sdk.
-    4. Deploy smart contract code using tbears cli.
-    5. Interact with smart contract.
+    1. Register new account
+    2. Download and Deploy icon sample app from app library.
+    3. Create Icon blockchain Ops network.
+    4. Test network and sdk.
+    5. Deploy smart contract code using tbears cli.
+    6. Interact with smart contract.
 
-## Step 1: Create workspace
+## Step 1: Register new account
 
 Morpheuslabs platform provide great system to create a ready blockchain development with few clicks.
 
 Now, we firstly create a workspace with all thing setup to start develop
 1. Register new account in `https://bps.morpheuslabs.io`
-2. Goto DashBoard tab click on New Workspace button
-3. Select Icon for blockchain network to work with, and application for application type, and then click next
-<img src="webapp/static/images/screens/ws-1.png"/>
+<img src="webapp/static/images/screens/a-1.png"/>
 
-4. Select Icon stack (ML-Icon-One)
-<img src="webapp/static/images/screens/ws-2.png"/>
-    
-5. And then click next, then Confirm & submit to create workspace
-6. Start workspace
-<img src="webapp/static/images/screens/ws-6.png"/>
-    
-7. Open workspace
-<img src="webapp/static/images/screens/ws-3.png"/>
-    
+2. Goto Membership tab click and subscribe try plan
+<img src="webapp/static/images/screens/a-2.png"/>
+
+3. Update use profile and finish subscribe
+<img src="webapp/static/images/screens/a-3.png"/>
+<img src="webapp/static/images/screens/a-41.png"/>
+<img src="webapp/static/images/screens/a-4.png"/>
+
+## Step 2: Download icon sample app from app library.
+
+Next we will download app from app library to run on workspace. Before you are able to download app, you need a gitlab or github repo to link with your account
+1. Goto `https://gitlab.com` or `https://github.com` and register new account if you do not have it yet.
+2. Goto your setting and create new access token:
+<img src="webapp/static/images/screens/a-5.png"/>
+
+`https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html`
+
+3. Copy it and paste access token to repository setting and connect
+<img src="webapp/static/images/screens/a-6.png"/>
+Wait a minute for workspace to connect with your git repo
+<img src="webapp/static/images/screens/a-7.png"/>
+
+4. Goto Application Library tab
+<img src="webapp/static/images/screens/a-8.png"/>
+
+5. Click on download icon of Polling SCORE Demo app and download app
+<img src="webapp/static/images/screens/a-9.png"/>
+
+6. After app is downloaded, let deploy it on new workspace
+<img src="webapp/static/images/screens/a-10.png"/>
+
+7. Select workspace as icon-demo and deploy
+<img src="webapp/static/images/screens/a-11.png"/>
+
+Wait little for deploying app, after app is deployed, let start it by click on start icon
+<img src="webapp/static/images/screens/a-12.png"/>
+<img src="webapp/static/images/screens/a-13.png"/>
+
+8. Open workspace you can see app folder is aready is setup in your workspace
+<img src="webapp/static/images/screens/a-14.png"/>
+
 So now, we have ready a development env to develop dApp
 
-# Step 2: Create Icon blockchain Ops network
+# Step 3: Create Icon blockchain Ops network
 
 Next, go to Blockchain Ops tab and click New BlockChain button
 <img src="webapp/static/images/screens/bc-1.png"/>
@@ -55,7 +85,7 @@ Next, go to Blockchain Ops tab and click New BlockChain button
 <img src="webapp/static/images/screens/bc-7.png"/>
 
 
-# Step 3: Test network and sdk
+# Step 4: Test network and sdk
 
 Before writing smart contract code, we will create a test script to check development environment and python sdk.
 
@@ -80,7 +110,7 @@ print(block)
 
 Run command `python3 test.py` you should get something like this print out on console `{'version': 'tbears', 'prev_block_hash': '8c49f9a497934bb500050c65bce593af82462ee5e6317face944d76f701c74af', 'merkle_tree_root_hash': 'tbears_block_manager_does_not_support_block_merkle_tree', 'time_stamp': 1571648452705096, 'confirmed_transaction_list': [], 'block_hash': '658594b6a6d249d3e5421d5eec47e71d4ad9055acb3e5d19e3baadca1182562c', 'height': 583, 'peer_id': 'hx6e1dd0d4432620778b54b2bbc21ac3df961adf89', 'signature': 'tbears_block_manager_does_not_support_block_signature'}`
 
-# Step 4: Deploy smart contract code using tbears cli
+# Step 5: Deploy smart contract code using tbears cli
 
 1. Type `tbears` to see command and supported options
 
@@ -122,7 +152,7 @@ Copy `"scoreAddress": "cx14b00a5e33ff887cb57e183730e9895ae652fa39"` here is depl
 
 That we finished deploy smart contract to network, let move to next part
 
-# Step 5: Interact with smart contract
+# Step 6: Interact with smart contract
 
 1. Goto webapp folder, then open main.py file from IDE and update field `default_score` is contract address you just deployed, and update `default_account` with your master address you get from BlockChain Ops.
 
