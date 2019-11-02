@@ -28,9 +28,8 @@ Now, we firstly create a workspace with all thing setup to start develop
 
 ## Step 2: Download icon sample app from app library.
 
-Next we will download app from app library to run on workspace. Before you are able to download app, you need a gitlab or github repo to link with your account
-1. Goto `https://gitlab.com` or `https://github.com` and register new account if you do not have it yet.
-2. Goto your setting and create new access token:
+Next we will download app from app library to run on workspace. Before you are able to download app, you need configure the platform My Repository setting the  **gitlab** or **github** connection to link to your account
+1. Goto `https://gitlab.com` or `https://github.com` and register new account if you do not have it yet. More info about My Repository configuration [here](https://docs.morpheuslabs.io/docs/configuration)
 <img src="webapp/static/images/screens/a-5.png"/>
 
 `https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html`
